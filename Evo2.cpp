@@ -29,7 +29,7 @@ void init_pop(int pop[size]) {
 
 void evaluation(int pop[size], int grade[size]) {
     for(int i = 0; i < size; i++){
-        grade[i] = 3*pop[i]*pop[i] - 3;
+        grade[i] = pop[i]*pop[i]*pop[i] - 3*pop[i];
     }
 }
 
