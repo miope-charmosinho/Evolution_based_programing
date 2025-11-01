@@ -2,6 +2,7 @@
 #include <iostream>
 #include <time.h>
 #include <cmath>
+#include <GL/glut.h>
 
 using namespace std;
 
@@ -12,12 +13,12 @@ using namespace std;
 // f(x) = sin(x) + 0.5sin(2x)   [<--]
 
 #define size 4
-#define gens 80
+#define gens 800
 #define mut 0.1
 #define range 5
 #define INT_MAX 2147483647
 #define LOW_FLOAT -2147483647.0
-#define dream_number 100
+#define dream_number 10000
 
 float population[size];
 float grade[size];
@@ -112,7 +113,7 @@ void alternating_mutation(float pop[size], int contador[1], float dream_team[dre
         contador[0] = 0;
     }
     else if (mutation_trigger(trigger) == true) {
-        mutation(pop, 0.3, 0);
+        mutation(pop, 0.1, 0);
         contador[0] = contador[0] + 1;
     }
     else {
